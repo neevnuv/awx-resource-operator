@@ -94,7 +94,7 @@ docker-push: ## Push docker image with the manager.
 
 .PHONY: runner-build
 runner-build: ## Build job runner image with the manager.
-	$(ENGINE) build -f runner.Dockerfile -t $(RUNNER_IMG) .
+	$(ENGINE) build -f Dockerfile.runner -t $(RUNNER_IMG) .
 
 .PHONY: runner-push
 runner-push: ## Push job runner image with the manager.
