@@ -165,7 +165,7 @@ spec:
         path: max_forks
         x-descriptors:
         - urn:alm:descriptor:com.tectonic.ui:int
-      - displayName: Pod Spec Override 
+      - displayName: Pod Spec Override
         path: pod_spec_override
         x-descriptors:
         - urn:alm:descriptor:com.tectonic.ui:text

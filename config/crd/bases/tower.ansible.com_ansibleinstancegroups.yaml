@@ -36,7 +36,8 @@ spec:
                 description: The name of the Instance Group
               credential_name:
                 type: string
-                description: Credential name, ID, or named URL to authenticate with Kubernetes or OpenShift. Must be of type “OpenShift or Kubernetes API Bearer Token”. Only for ContainerGroup.
+                description: 'Credential name, ID, or named URL to authenticate with Kubernetes or OpenShift. 
+                  Must be of type “OpenShift or Kubernetes API Bearer Token”. Only for ContainerGroup.'
               is_container_group:
                 type: boolean
                 default: false
