@@ -30,6 +30,9 @@ spec:
           metadata:
             type: object
           spec:
+            x-kubernetes-validations:
+            - rule: "!(has(self.pod_spec_override) && (has(self.is_container_group) ? self.is_container_group : false ) == false)"
+              message: "podSpecOverride is only valid for container groups"
             properties:
               name:
                 type: string
@@ -40,6 +43,9 @@ spec:
               is_container_group:
                 type: boolean
                 description: Whether or not this is a container group
+              pod_spec_override:
+                type: string
+                description: Override the pod spec for this instance group. A custom pod spec for jobs
               policy_spec_override:
                 description: Override the policy spec for this instance group
                 type: string
