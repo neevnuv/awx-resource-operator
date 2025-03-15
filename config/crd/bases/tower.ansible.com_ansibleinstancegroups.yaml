@@ -32,7 +32,7 @@ spec:
           spec:
             x-kubernetes-validations:
             - rule: "!(has(self.pod_spec_override) && (has(self.is_container_group) ? self.is_container_group : false ) == false)"
-              message: "podSpecOverride is only valid for container groups"
+              message: "pod_spec_override is only valid for container groups"
             properties:
               name:
                 type: string
